@@ -1,0 +1,19 @@
+.banner__item {
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner__arrow-left, .banner__arrow-right {
+  background-color: transparent;
+  border: none;
+}
+
+mat-icon {
+  font-size: 48px;
+  color: #fff;
+  margin-right: 18px;
+}

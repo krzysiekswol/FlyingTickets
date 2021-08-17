@@ -1,0 +1,35 @@
+<div class="main__container">
+  <div class="main__container-item">
+    <h2 class="title__form--airport">{{titleTextFormAirport | uppercase}}</h2>
+    <div class="main__form--airport">
+      <div class="form__airport-item">
+        <span class="material-icons icon-airport">flight_takeoff</span>
+        <mat-form-field appearance="standard">
+          <mat-label>Departure</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+      </div>
+      <div class="form__airport-item">
+        <span class="material-icons icon-airport">flight_land</span>
+        <mat-form-field appearance="standard">
+          <mat-label>Arrival</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+      </div>
+      <div class="form__airport-item">
+        <span class="material-icons icon-airport">event</span>
+        <mat-form-field appearance="standard">
+          <mat-label>Choose Departure Date</mat-label>
+          <input matInput [matDatepicker]="datepicker" [min]="minDate" [max]="maxDate">
+          <mat-datepicker-toggle matSuffix [for]="datepicker">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker touchUi #datepicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="main__container-item">
+    <app-flights-option></app-flights-option>
+  </div>
+</div>

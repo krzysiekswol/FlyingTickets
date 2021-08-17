@@ -1,0 +1,7 @@
+<ng-container *ngIf="flag; else noflights"></ng-container>
+<ng-template #noflights>
+  <div class="no__flights">
+    <h2 class="no__flights-title">Sorry no flights for you</h2>
+    <p class="no__flight-description">Firstly fill form on the left hand side <mat-icon>edit_note</mat-icon></p>
+  </div>
+</ng-template>
