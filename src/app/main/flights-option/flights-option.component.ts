@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-flights-option',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flights-option.component.css']
 })
 export class FlightsOptionComponent implements OnInit {
-  flag = false;
+  @Input() flag;
+  @Input() airport;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,3 +1,22 @@
 .no__flights {
   text-align: center;
 }
+
+.flightList__list {
+  padding-right: 40px;
+
+}
+
+.flightList__item {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background-color: #673AB7;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+}
+
+/deep/ .mat-checkbox-frame {
+  border-color: white !important;
+}
