@@ -10,7 +10,6 @@ import { BannerComponent } from './header/banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { FlightsOptionComponent } from './main/flights-option/flights-option.component';
-import {FormsModule} from '@angular/forms';
 
 
 
@@ -23,12 +22,11 @@ import {FormsModule} from '@angular/forms';
     MainComponent,
     FlightsOptionComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MaterialModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
