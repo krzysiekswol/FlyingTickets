@@ -1,4 +1,23 @@
-<ng-container *ngIf="flag; else noflights"></ng-container>
+<ng-container *ngIf="flag; else noflights">
+  <ul class="flightList__list">
+    <li class="flightList__item">
+      <div class="item__carrier">
+        LOT Polish Airlines
+      </div>
+      <div class="item__departure-airport">
+        {{airport.departureAirport}}
+      </div>
+      <div class="item__arrival-airport">
+        {{airport.arrivalAirport}}
+      </div>
+      <div class="item__flight-start-date">
+        {{airport.flightStartDate | date: 'mediumDate'}}
+      </div>
+      <mat-checkbox>Confirm</mat-checkbox>
+    </li>
+
+  </ul>
+</ng-container>
 <ng-template #noflights>
   <div class="no__flights">
     <h2 class="no__flights-title">Sorry no flights for you</h2>

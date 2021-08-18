@@ -5,31 +5,45 @@
       <div class="form__airport-item">
         <span class="material-icons icon-airport">flight_takeoff</span>
         <mat-form-field appearance="standard">
-          <mat-label>Departure</mat-label>
-          <input type="text" matInput>
+          <mat-label>From</mat-label>
+          <mat-select [(ngModel)]="userChoiceOfFlight.departureAirport">
+            <mat-option *ngFor="let depAirport of departureAirports" [value]="depAirport.name">
+              {{depAirport.name}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </div>
       <div class="form__airport-item">
         <span class="material-icons icon-airport">flight_land</span>
         <mat-form-field appearance="standard">
-          <mat-label>Arrival</mat-label>
-          <input type="text" matInput>
+          <mat-label>To</mat-label>
+          <mat-select [(ngModel)]="userChoiceOfFlight.arrivalAirport">
+            <mat-option *ngFor="let arrAirport of arrivalAirports" [value]="arrAirport.name">
+              {{arrAirport.name}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </div>
       <div class="form__airport-item">
         <span class="material-icons icon-airport">event</span>
         <mat-form-field appearance="standard">
           <mat-label>Choose Departure Date</mat-label>
-          <input matInput [matDatepicker]="datepicker" [min]="minDate" [max]="maxDate">
+          <input matInput
+                 [matDatepicker]="datepicker"
+                 [min]="minDate" [max]="maxDate"
+                 [(ngModel)]="userChoiceOfFlight.flightStartDate">
           <mat-datepicker-toggle matSuffix [for]="datepicker">
             <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
           </mat-datepicker-toggle>
           <mat-datepicker touchUi #datepicker></mat-datepicker>
         </mat-form-field>
       </div>
+      <div class="form__airport-item form__button--right">
+        <button mat-raised-button color="primary" (click)="showAvailableFlights()">Confirm</button>
+      </div>
     </div>
   </div>
   <div class="main__container-item">
-    <app-flights-option></app-flights-option>
+    <app-flights-option [flag]="flag" [airport]="userChoiceOfFlight"></app-flights-option>
   </div>
 </div>
