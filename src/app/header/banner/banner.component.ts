@@ -4,7 +4,7 @@ import {Banner} from '../../models/banner-model';
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.css']
+  styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
   banner1 = 'url("../../../assets/img/banner1v1.jpg")';

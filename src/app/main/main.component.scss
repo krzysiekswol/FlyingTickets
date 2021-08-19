@@ -1,0 +1,48 @@
+.main__container {
+  display: flex;
+  justify-content: space-around;
+
+  .main__container-item {
+    outline: 1px solid orange;
+    width: 50%;
+    margin: 20px;
+
+    .title__form--airport {
+      text-align: center;
+    }
+
+    .main__form--airport {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+
+      .form__airport-item {
+        display: flex;
+        align-items: center;
+
+        .icon-airport {
+          margin-right: 20px;
+        }
+
+        mat-form-field {
+          width: 50%;
+        }
+      }
+
+      .form__button--right {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
