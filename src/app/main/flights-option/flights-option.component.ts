@@ -8,6 +8,9 @@ import {Component, Input, OnInit} from '@angular/core';
 export class FlightsOptionComponent implements OnInit {
   @Input() flag;
   @Input() airport;
+  @Input() carrier;
+  @Input() weather;
+  @Input() imgSrcPath;
   constructor() { }
 
   ngOnInit(): void {

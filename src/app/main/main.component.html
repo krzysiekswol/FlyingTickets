@@ -1,5 +1,5 @@
 <div class="main__container">
-  <div class="main__container-item">
+  <div class="main__container-item main__container-item--border">
     <h2 class="title__form--airport">{{titleTextFormAirport | uppercase}}</h2>
     <div class="main__form--airport">
       <div class="form__airport-item">
@@ -17,7 +17,7 @@
         <span class="material-icons icon-airport">flight_land</span>
         <mat-form-field appearance="standard">
           <mat-label>To</mat-label>
-          <mat-select [(ngModel)]="userChoiceOfFlight.arrivalAirport">
+          <mat-select [(ngModel)]="userChoiceOfFlight.arrivalAirport" [disabled]="!userChoiceOfFlight.departureAirport ? true : false">
             <mat-option *ngFor="let arrAirport of arrivalAirports" [value]="arrAirport.name">
               {{arrAirport.name}}
             </mat-option>
@@ -39,11 +39,15 @@
         </mat-form-field>
       </div>
       <div class="form__airport-item form__button--right">
-        <button mat-raised-button color="primary" (click)="showAvailableFlights()">Confirm</button>
+        <button mat-raised-button color="primary" [disabled]="!getAllValues()" (click)="showAvailableFlights() && getWeather() && getCarrier() && getArrivalAirports()">Confirm</button>
+        <button mat-raised-button color="warn" (click)="resetValue()">Reset</button>
       </div>
     </div>
   </div>
-  <div class="main__container-item">
-    <app-flights-option [flag]="flag" [airport]="userChoiceOfFlight"></app-flights-option>
+  <div class="main__container-item main__container-item">
+    <app-flights-option [flag]="flag" [airport]="userChoiceOfFlight" [carrier]="carrier" [weather]="tempCity" [imgSrcPath]="imgSrcPath"></app-flights-option>
+  </div>
+  <div class="main__container-item--full">
+    <app-seat-guru></app-seat-guru>
   </div>
 </div>

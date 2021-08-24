@@ -2,7 +2,8 @@
   <ul class="flightList__list">
     <li class="flightList__item">
       <div class="item__carrier">
-        LOT Polish Airlines
+        <img class="company__logo" src="./assets/img/lot-2.png" alt="">
+        <h4>{{carrier}}</h4>
       </div>
       <div class="item__departure-airport">
         {{airport.departureAirport}}
@@ -15,8 +16,29 @@
       </div>
       <mat-checkbox>Confirm</mat-checkbox>
     </li>
-
   </ul>
+  <h3>Current weather at {{airport.arrivalAirport}}</h3>
+  <div class="weather__box">
+    <div class="weather__item">
+      <p class="weather__text">Weather</p>
+      <img src="{{imgSrcPath}}" alt="">
+      <p class="img__text">{{weather.wxDescription | uppercase}}</p>
+    </div>
+    <div class="weather__item">
+      <p class="weather__text">Min temperature</p>
+      <mat-icon class="material-icons-outlined">
+        thermostat
+      </mat-icon>
+      <p class="weather__data">{{weather.minTemp}}</p>
+    </div>
+    <div class="weather__item">
+      <p class="weather__text">Max temperature</p>
+      <mat-icon class="material-icons-outlined">
+        thermostat
+      </mat-icon>
+      <p class="weather__data">{{weather.maxTemp}}</p>
+    </div>
+  </div>
 </ng-container>
 <ng-template #noflights>
   <div class="no__flights">
