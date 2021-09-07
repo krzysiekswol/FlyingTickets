@@ -1,9 +1,30 @@
 <ng-container *ngIf="flag; else noflights">
   <ul class="flightList__list">
+    <li class="flightList__item--header">
+      <div class="item__carrier">
+        Carrier
+      </div>
+      <div class="item__departure-airport">
+        A/C Type
+      </div>
+      <div class="item__departure-airport">
+        From
+      </div>
+      <div class="item__arrival-airport">
+        To
+      </div>
+      <div class="item__flight-start-date">
+        Dep. Date
+      </div>
+      <div class="item__flight-confirm"></div>
+    </li>
     <li class="flightList__item">
       <div class="item__carrier">
-        <img class="company__logo" src="./assets/img/lot-2.png" alt="">
-        <h4>{{carrier}}</h4>
+<!--        <img class="company__logo" src="./assets/img/lot-2.png" alt="">-->
+        <h4 class="item__carrier-text">{{carrier}}</h4>
+      </div>
+      <div class="item__departure-airport">
+        {{setAircraftType()}}
       </div>
       <div class="item__departure-airport">
         {{airport.departureAirport}}
@@ -14,10 +35,10 @@
       <div class="item__flight-start-date">
         {{airport.flightStartDate | date: 'mediumDate'}}
       </div>
-      <mat-checkbox>Confirm</mat-checkbox>
+      <button mat-raised-button color="accent" (click)="showEnum() && setAircraftForService()">{{this.dataShareService.buttonText}}</button>
     </li>
   </ul>
-  <h3>Current weather at {{airport.arrivalAirport}}</h3>
+  <h3>Current weather at <span class="primary__color">{{airport.arrivalAirport}}</span></h3>
   <div class="weather__box">
     <div class="weather__item">
       <p class="weather__text">Weather</p>

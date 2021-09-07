@@ -8,6 +8,7 @@ mat-toolbar {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
+  cursor: pointer;
 }
 .brand__logo {
   max-width: 40px;

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
 
@@ -9,13 +9,15 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-
+  public aircraftType = '';
   private url = 'https://flightcarrier.free.beeceptor.com/flightcarrier';
+  private urlSeat = 'https://flightcarrier.free.beeceptor.com/airplane';
   constructor(private http: HttpClient) {}
   get(): Observable<any> {
     return this.http.get(this.url);
   }
-  getMessage(msg: string): void {
-    console.log(msg);
+  getSeats(): Observable<any> {
+    return this.http.get(this.urlSeat,
+      {params: new HttpParams().set('plane', this.aircraftType)});
   }
 }

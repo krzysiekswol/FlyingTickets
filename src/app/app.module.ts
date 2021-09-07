@@ -13,6 +13,14 @@ import { MainComponent } from './main/main.component';
 import { FlightsOptionComponent } from './main/flights-option/flights-option.component';
 import {FormsModule} from '@angular/forms';
 import { SeatGuruComponent } from './main/seat-guru/seat-guru.component';
+import { StartPageComponent } from './start-page/start-page.component';
+import {AppRoutingModule} from './app-routing-module';
+import { UserDataComponent } from './user-data/user-data.component';
+import { SummaryPageComponent } from './summary-page/summary-page.component';
+
+
+
+
 
 
 
@@ -26,13 +34,18 @@ import { SeatGuruComponent } from './main/seat-guru/seat-guru.component';
     MainComponent,
     FlightsOptionComponent,
     SeatGuruComponent,
+    StartPageComponent,
+    UserDataComponent,
+    SummaryPageComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

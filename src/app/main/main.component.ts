@@ -4,6 +4,8 @@ import {UserChoiceOfFlight} from '../dataModel/UserChoiceOfFlight';
 import {HttpWeatherService} from '../service/http-weather.service';
 import {DataService} from '../service/data.service';
 import {DataAirportsService} from '../service/data-airports.service';
+import {DataShareService} from '../service/data-share.service';
+
 
 
 
@@ -36,7 +38,11 @@ export class MainComponent implements OnInit{
     arrivalAirport: '',
     flightStartDate: ''
   };
-  constructor(private httpWeather: HttpWeatherService, private httpCarrier: DataService, private httpAirports: DataAirportsService) { }
+  constructor(
+    private httpWeather: HttpWeatherService,
+    private httpCarrier: DataService,
+    private httpAirports: DataAirportsService,
+    private dataShareService: DataShareService) { }
   showAvailableFlights(): boolean {
     return this.flag = true;
   }

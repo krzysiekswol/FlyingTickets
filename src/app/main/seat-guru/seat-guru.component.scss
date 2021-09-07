@@ -1,0 +1,33 @@
+.seat__wrapper {
+  display: flex;
+  justify-content: space-around;
+
+  .seat__item{
+
+    .item__airplane-title {
+      text-align: center;
+    }
+
+    .image__container {
+
+      .image__seat {
+        cursor: zoom-in;
+      }
+
+      .zoomIn {
+        transform: scale(2) translateX(50%);
+        cursor: zoom-out;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .button__wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+
+
+

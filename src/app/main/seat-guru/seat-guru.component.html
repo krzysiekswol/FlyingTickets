@@ -1,1 +1,37 @@
-<p>seat-guru works!</p>
+<ng-container *ngIf="setFlag()">
+  <div class="seat__wrapper">
+    <div class="seat__item">
+      <h3 class="item__airplane-title">
+        {{setAircraftTitleName()}}
+      </h3>
+      <div class="image__container">
+        <img src="assets/img/B738.svg" *ngIf="this.dataService.aircraftType === 'B738'" alt="" class="image__seat" (click)="setZoom()" [ngClass]="{zoomIn: zoom === true}">
+        <img src="assets/img/B788.svg" *ngIf="this.dataService.aircraftType === 'B788'" alt="" class="image__seat" (click)="setZoom()" [ngClass]="{zoomIn: zoom === true}">
+      </div>
+    </div>
+    <div class="seat__item">
+      <h3 class="seat-item__text">
+        Choose your seat
+      </h3>
+      <mat-form-field appearance="fill" (click)="getSeatsForPlane()">
+        <mat-label>Row</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let row of rowNumber" [value]="row">
+            {{row}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" (click)="getSeatsForPlane()">
+        <mat-label>Seat</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let seat of seatLetter" [value]="seat">
+            {{seat}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="button__wrapper">
+        <button mat-raised-button color="primary" class="button__seat-confirm" routerLink="/booking/userData">{{this.dataSharedService.buttonText}}</button>
+      </div>
+    </div>
+  </div>
+</ng-container>
