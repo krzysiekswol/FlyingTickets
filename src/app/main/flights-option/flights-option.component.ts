@@ -13,6 +13,7 @@ export class FlightsOptionComponent {
   @Input() carrier;
   @Input() weather;
   @Input() imgSrcPath;
+  @Input() flightNumber;
   aircraftType = '';
   constructor(private dataShareService: DataShareService, private httpService: DataService) { }
   showEnum(): any {

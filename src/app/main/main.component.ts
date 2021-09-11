@@ -38,6 +38,7 @@ export class MainComponent implements OnInit{
     arrivalAirport: '',
     flightStartDate: ''
   };
+  flightNumber = '';
   constructor(
     private httpWeather: HttpWeatherService,
     private httpCarrier: DataService,
@@ -66,15 +67,16 @@ export class MainComponent implements OnInit{
   getCarrier(): any {
     return this.httpCarrier.get().subscribe(data => {
       // tslint:disable-next-line:forin
-      for (const key in data) {
-        this.carrier = data[key];
+      const {Carrier: carrier, FlightNumber: flightnumber} = data;
+      this.carrier = carrier;
+      this.flightNumber = flightnumber;
       }
-    });
+    );
   }
   getArrivalAirports(): any {
     return this.httpAirports.get().subscribe(data => {
       data.airports.forEach(item => {
-        this.arrivalAirports.push(item);
+          this.arrivalAirports.push(item);
       });
     });
   }

@@ -1,33 +1,36 @@
+.flightList__table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #673AB7;
+  padding-bottom: 10px;
+  thead {
 
+    tr {
 
-.flightList__list {
-  padding-right: 40px;
-
-  .flightList__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-    border-right: 5px;
-    background-color: #673AB7;
-    color: #fff;
-    padding: 10px;
-
-    div {
-      width: 10%;
-    }
-
-    .item__carrier {
-
-      .item__carrier-text {
-        margin: 0;
+      th {
+        text-align: left;
+        color: #673AB7;
       }
     }
   }
-  .flightList__item--header {
-    @extend .flightList__item;
-    border-bottom: 1px solid #fff;
+
+  tbody {
+
+    tr {
+
+      td {
+        text-align: left;
+        font-weight: bold;
+
+        button {
+          color: #673AB7;
+        }
+      }
+
+      td:last-child {
+        text-align: right;
+      }
+    }
   }
 }
 

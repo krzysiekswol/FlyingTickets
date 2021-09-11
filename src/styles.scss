@@ -1,14 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+//variables
 
-
+:root {
+  --mediaMedium: 1000px;
+  --mediaSmall: 767px;
+  --mediaLarge: 1400px;
+}
 
 
 
 
 html, body { height: 100%; }
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+
+
 
 

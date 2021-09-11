@@ -1,32 +1,52 @@
 mat-toolbar {
   display: flex;
   justify-content: space-between;
+
+  .brand__name {
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    cursor: pointer;
+
+    .brand__logo {
+      max-width: 40px;
+      max-height: 40px;
+      margin-right: 10px;
+    }
+  }
+
+  .nav__container {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-right: 10%;
+
+    .nav__item {
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    justify-content: space-between;
+    margin: 0 auto;
+  }
 }
 
-.brand__name {
-  margin-left: 10%;
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  cursor: pointer;
-}
-.brand__logo {
-  max-width: 40px;
-  max-height: 40px;
-  margin-right: 10px;
-}
-.nav__container {
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin-right: 10%;
+.active__link {
+  color: #FFCC00 !important;
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
-  padding: 10px;
-}
+
+
+
+
+
 
 
