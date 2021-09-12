@@ -7,4 +7,9 @@ import {Component} from '@angular/core';
 })
 
 export class NavigationComponent {
+  mobileMenu = false;
+
+  showMobileMenu(): boolean {
+     return this.mobileMenu = !this.mobileMenu;
+  }
 }

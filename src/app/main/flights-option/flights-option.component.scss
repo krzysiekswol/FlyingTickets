@@ -3,6 +3,7 @@
   margin-bottom: 20px;
   border-bottom: 1px solid #673AB7;
   padding-bottom: 10px;
+
   thead {
 
     tr {
@@ -10,6 +11,20 @@
       th {
         text-align: left;
         color: #673AB7;
+
+        @media (max-width: 767px) {
+          margin-bottom: 5px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+
+
+        th:nth-child(2n+2) {
+          background-color: #BDBDBD;
+        }
       }
     }
   }
@@ -25,12 +40,40 @@
         button {
           color: #673AB7;
         }
+
+        @media (max-width: 767px) {
+          padding-left: 20px;
+          margin-bottom: 5px;
+        }
       }
 
       td:last-child {
         text-align: right;
       }
+
+      @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+
+        td:nth-child(2n+2) {
+          background-color: #BDBDBD;
+        }
+      }
     }
+
+    @media (max-width: 767px) {
+      flex-grow: 2;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    margin: 10px;
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+    padding: 0 10px;
+    width: auto;
   }
 }
 
@@ -66,6 +109,10 @@ h3 {
       width: 70px;
       height: 70px;
     }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
   }
 }
 

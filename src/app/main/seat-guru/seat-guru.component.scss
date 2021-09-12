@@ -19,12 +19,26 @@
         cursor: zoom-out;
         background-color: rgba(0, 0, 0, 0.3);
       }
+
+      @media (max-width: 500px) {
+        display: flex;
+        justify-content: center;
+      }
     }
 
     .button__wrapper {
       display: flex;
       justify-content: flex-end;
     }
+
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column-reverse;
   }
 }
 

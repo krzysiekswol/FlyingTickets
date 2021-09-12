@@ -70,6 +70,7 @@ export class MainComponent implements OnInit{
       const {Carrier: carrier, FlightNumber: flightnumber} = data;
       this.carrier = carrier;
       this.flightNumber = flightnumber;
+      this.dataShareService.ticketSummary.flightNumber = flightnumber;
       }
     );
   }

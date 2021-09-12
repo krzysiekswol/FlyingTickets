@@ -17,6 +17,7 @@ import { StartPageComponent } from './start-page/start-page.component';
 import {AppRoutingModule} from './app-routing-module';
 import { UserDataComponent } from './user-data/user-data.component';
 import { SummaryPageComponent } from './summary-page/summary-page.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -37,6 +38,7 @@ import { SummaryPageComponent } from './summary-page/summary-page.component';
     StartPageComponent,
     UserDataComponent,
     SummaryPageComponent,
+    ContactComponent,
 
   ],
   imports: [

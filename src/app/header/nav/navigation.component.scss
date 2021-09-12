@@ -31,11 +31,48 @@ mat-toolbar {
         padding: 10px;
       }
     }
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
-  @media (max-width: 1000px) {
-    justify-content: space-between;
-    margin: 0 auto;
+  .menu__button-mobile {
+    display: none;
+
+    @media (max-width: 1000px) {
+      display: block;
+      background-color: #673AB7;
+      color: #fff;
+    }
+  }
+}
+
+.mobile__menu {
+  background-color: #673AB7;
+  list-style-type: none;
+  margin: 0;
+
+  .nav__item {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    span {
+      color: #FFCC00;
+      margin-right: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+  }
+
+  @media (min-width: 1001px) {
+    display: none;
   }
 }
 
