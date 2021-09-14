@@ -29,4 +29,8 @@ export class FlightsOptionComponent {
   setAircraftForService(): string {
     return this.httpService.aircraftType = this.aircraftType;
   }
+  confirmAirports(): void {
+    this.dataShareService.ticketSummary.departureAirportCode = this.airport.departureAirport;
+    this.dataShareService.ticketSummary.arrivalAirportCode = this.airport.arrivalAirport;
+  }
 }

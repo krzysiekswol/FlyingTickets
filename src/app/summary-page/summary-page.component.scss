@@ -1,10 +1,44 @@
 .l-main {
   padding: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 
-  .under__construction {
+  .main__summary-title {
     font-weight: bold;
+    align-self: center;
+    font-size: 1.3rem;
+  }
+
+  .summary__list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .summary__item {
+      list-style-type: none;
+      font-weight: bold;
+      color: #673AB7;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #BDBDBD;
+
+      .summary__item-data {
+        color: #000;
+      }
+    }
+  }
+
+  .button__wrapper-saved {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    button {
+      width: 40vw;
+    }
   }
 }

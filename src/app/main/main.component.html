@@ -39,8 +39,10 @@
         </mat-form-field>
       </div>
       <div class="form__airport-item form__button--right">
-        <button mat-raised-button color="primary" [disabled]="!getAllValues()" (click)="showAvailableFlights() && getWeather() && getCarrier() && getArrivalAirports()">Confirm</button>
-        <button mat-raised-button color="warn" (click)="resetValue()">Reset</button>
+        <button mat-raised-button color="primary" [disabled]="!getAllValues()"
+                (click)="showAvailableFlights() && getWeather() && getCarrier() && getArrivalAirports() && getDate()">Confirm</button>
+        <button mat-raised-button color="warn"
+                (click)="resetValue()">Reset</button>
       </div>
     </div>
   </div>

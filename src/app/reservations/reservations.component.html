@@ -1,0 +1,25 @@
+<div class="l-main">
+  <h3 class="info__user">You do not have any reservation! Get Start <a routerLink="/booking" routerLinkActive="active__link">Here</a></h3>
+  <ng-container>
+    <table>
+      <thead>
+        <tr>
+          <th>Reservation No.</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Destination</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let element of arr">
+        <tr>
+          <td>{{element.reservationNumber}}</td>
+          <td>{{element.passengerFirstName}}</td>
+          <td>{{element.passengerLastName}}</td>
+          <td>{{element.arrivalAirportCode}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</div>
+
+

@@ -44,7 +44,7 @@
         {{airport.flightStartDate | date: 'mediumDate'}}
       </td>
       <td>
-        <button mat-raised-button color="accent" (click)="showEnum() && setAircraftForService()">{{this.dataShareService.buttonText}}</button>
+        <button mat-raised-button color="accent" (click)="showEnum() && setAircraftForService() && confirmAirports()">{{this.dataShareService.buttonText}}</button>
       </td>
     </tr>
     </tbody>

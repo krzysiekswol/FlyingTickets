@@ -15,6 +15,8 @@ export class SeatGuruComponent {
   zoom = false;
   rowNumber: [] = [];
   seatLetter: [] = [];
+  selectRow: number;
+  selectedSeat = '';
 
   constructor(private dataSharedService: DataShareService, private dataService: DataService) { }
   setFlag(): boolean {
@@ -48,6 +50,10 @@ export class SeatGuruComponent {
     } else {
       return 'Boeing 737-800';
     }
+  }
+  setSelectedSeat(): void {
+    this.dataSharedService.ticketSummary.seatNumber[0] = this.selectRow;
+    this.dataSharedService.ticketSummary.seatNumber[1] = this.selectedSeat;
   }
 }
 

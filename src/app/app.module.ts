@@ -18,6 +18,7 @@ import {AppRoutingModule} from './app-routing-module';
 import { UserDataComponent } from './user-data/user-data.component';
 import { SummaryPageComponent } from './summary-page/summary-page.component';
 import { ContactComponent } from './contact/contact.component';
+import { ReservationsComponent } from './reservations/reservations.component';
 
 
 
@@ -39,6 +40,7 @@ import { ContactComponent } from './contact/contact.component';
     UserDataComponent,
     SummaryPageComponent,
     ContactComponent,
+    ReservationsComponent,
 
   ],
   imports: [

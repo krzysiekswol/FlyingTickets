@@ -1,38 +1,74 @@
 <div class="l-main">
+  <h3 class="main__summary-title">Summary of reservation no. {{reservation.reservationNumber}}</h3>
   <ul class="summary__list">
-    <li class="summary__item-title">
-      Passenger
-      <div class="summary__item-data"></div>
+    <li class="summary__item">
+      <div class="summary__item-title">
+        Reservation Number
+      </div>
+      <div class="summary__item-data">
+        {{reservation.reservationNumber}}
+      </div>
     </li>
-    <li class="summary__item-title">
-      Passport/ID
-      <div class="summary__item-data">{{reservation.reservationNumber}}</div>
+    <li class="summary__item">
+      <div class="summary__item-title">
+        Passenger
+      </div>
+      <div class="summary__item-data">
+        {{userTitleSummary}} {{reservation.passengerFirstName}} {{reservation.passengerLastName}}
+      </div>
     </li>
-    <li class="summary__item-title">
-      Flight No.
-      <div class="summary__item-data"></div>
+    <li class="summary__item">
+      <div class="summary__item-title">
+        Passport/ID
+      </div>
+      <div class="summary__item-data">
+        {{reservation.passportNumber}}
+      </div>
     </li>
-    <li class="summary__item-title">
-      From
-      <div class="summary__item-data"></div>
+    <li class="summary__item">
+      <div class="summary__item-title">
+        Flight No.
+      </div>
+      <div class="summary__item-data">
+        {{reservation.flightNumber}}
+      </div>
     </li>
-    <li class="summary__item-title">
-      To
-      <div class="summary__item-data"></div>
+    <li class="summary__item">
+      <div class="summary__item-title">
+        From
+      </div>
+      <div class="summary__item-data">
+        {{reservation.departureAirportCode}}
+      </div>
     </li>
-    <li class="summary__item-title">
-      Equipment
-      <div class="summary__item-data"></div>
+    <li class="summary__item">
+      <div class="summary__item-title">
+        To
+      </div>
+      <div class="summary__item-data">
+        {{reservation.arrivalAirportCode}}
+      </div>
     </li>
-    <li class="summary__item-title">
-      Flight Date
-      <div class="summary__item-data"></div>
+    <li class="summary__item">
+      <div class="summary__item-title">
+        Flight Date
+      </div>
+      <div class="summary__item-data">
+        {{reservation.flightStartDate | date: 'mediumDate'}}
+      </div>
     </li>
-    <li class="summary__item-title">
-      Departure Time
-      <div class="summary__item-data"></div>
+    <li class="summary__item">
+      <div class="summary__item-title">
+        Seat
+      </div>
+      <div class="summary__item-data">
+        {{reservation.seatNumber[0]}}{{reservation.seatNumber[1]}}
+      </div>
     </li>
   </ul>
+  <div class="button__wrapper-saved">
+    <button mat-raised-button color="primary" (click)="setDataForLocalStorage() &&  setLocalStorage()">Save your flight</button>
+  </div>
 </div>
 
 

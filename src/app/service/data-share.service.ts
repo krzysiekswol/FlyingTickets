@@ -7,6 +7,7 @@ import {TicketReservation} from '../dataModel/ticketReservationModel';
 export class DataShareService {
   flagSeat = false;
   buttonText = 'Confirm';
+  userTitle = '';
   ticketSummary: TicketReservation = {
     reservationNumber: '',
     passengerFirstName: '',
@@ -16,7 +17,7 @@ export class DataShareService {
     arrivalAirportCode: '',
     departureAirportCode: '',
     flightStartDate: null,
-    seatNumber: [null, null]
+    seatNumber: [null, undefined]
   };
   constructor() { }
   setFlagSeatValue(): boolean {

@@ -15,7 +15,7 @@
       </h3>
       <mat-form-field appearance="fill" (click)="getSeatsForPlane()">
         <mat-label>Row</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="selectRow">
           <mat-option *ngFor="let row of rowNumber" [value]="row">
             {{row}}
           </mat-option>
@@ -23,14 +23,14 @@
       </mat-form-field>
       <mat-form-field appearance="fill" (click)="getSeatsForPlane()">
         <mat-label>Seat</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="selectedSeat">
           <mat-option *ngFor="let seat of seatLetter" [value]="seat">
             {{seat}}
           </mat-option>
         </mat-select>
       </mat-form-field>
       <div class="button__wrapper">
-        <button mat-raised-button color="primary" class="button__seat-confirm" routerLink="/booking/userData">{{this.dataSharedService.buttonText}}</button>
+        <button mat-raised-button color="primary" (click)="setSelectedSeat()" class="button__seat-confirm" routerLink="/booking/userData">{{this.dataSharedService.buttonText}}</button>
       </div>
     </div>
   </div>

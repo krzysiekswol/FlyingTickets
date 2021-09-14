@@ -7,5 +7,5 @@ export class TicketReservation {
   arrivalAirportCode: string;
   departureAirportCode: string;
   flightStartDate: Date;
-  seatNumber: [number, string];
+  seatNumber: [a: number, b: string];
 }

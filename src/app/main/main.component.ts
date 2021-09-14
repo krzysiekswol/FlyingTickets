@@ -90,6 +90,9 @@ export class MainComponent implements OnInit{
         this.flag = false;
       }
   }
+  getDate(): Date {
+    return this.dataShareService.ticketSummary.flightStartDate = new Date (this.userChoiceOfFlight.flightStartDate);
+  }
   ngOnInit(): void {
     this.getArrivalAirports();
   }

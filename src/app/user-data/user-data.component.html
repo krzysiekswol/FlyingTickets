@@ -1,10 +1,10 @@
 <div class="user-data__container">
-  <form action="" class="user-data__form">
+  <div class="user-data__form">
     <div class="user-data__item user-data__personal">
       <label>Personal Data</label>
       <mat-form-field>
         <mat-label>Title</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="userTitle">
           <mat-option *ngFor="let title of titles" [value]="title">
             {{title}}
           </mat-option>
@@ -12,41 +12,36 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Name</mat-label>
-        <input matInput>
+        <input matInput [(ngModel)]="firstName" required>
       </mat-form-field><mat-form-field>
         <mat-label>Surname</mat-label>
-        <input matInput>
+        <input matInput [(ngModel)]="lastName" required>
       </mat-form-field>
     </div>
-    <div class="user-data__item user__data-document">
+    <div class="user-data__item user__data-document" >
       <label>Passport/ID</label>
       <mat-form-field>
-        <mat-label>Seria</mat-label>
-        <input matInput placeholder="Ex. ABC">
+        <mat-label>Serie</mat-label>
+        <input matInput placeholder="Ex. ABC" [(ngModel)]="passportIDSerie" required>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Number</mat-label>
-        <input matInput type="number" placeholder="Ex. 0123456">
+        <input matInput type="number" placeholder="Ex. 0123456" [(ngModel)]="passportIDNumber" required>
       </mat-form-field>
     </div>
     <div class="user-data__item user-data__contact">
       <label>Contact</label>
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <input matInput type="email" placeholder="Ex. test@test.pl">
+        <input matInput type="email" placeholder="Ex. test@test.pl" required [(ngModel)]="email">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Phone</mat-label>
-        <span matPrefix>+&nbsp;&nbsp;
-          <mat-select>
-            <mat-option *ngFor="let prefix of prefixes" [value]="prefix">{{prefix}}</mat-option>
-          </mat-select>
-        </span>
         <input matInput type="tel" placeholder="Ex. 555-555-555">
       </mat-form-field>
     </div>
     <div class="button__wrapper">
-      <button type="submit" (click)="createReservationNumber()" mat-raised-button color="accent" class="button__summary" routerLink="/booking/userData/summary">Proceed to summary</button>
+      <button [disabled]="!disabledButton()" (click)="createReservationNumber() && savePersonalData()" mat-raised-button color="accent" class="button__summary" routerLink="/booking/userData/summary">Proceed to summary</button>
     </div>
-  </form>
+  </div>
 </div>
