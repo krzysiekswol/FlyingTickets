@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LocalStorageService} from '../service/local-storage.service';
-import {objectKeys} from 'codelyzer/util/objectKeys';
+
 
 @Component({
   selector: 'app-reservations',
@@ -14,11 +14,21 @@ export class ReservationsComponent implements OnInit{
     this.showData();
   }
   showData(): {} {
-    const data = this.localStorage.getLocalStorage();
-    const objSize = Object.keys(data).length;
-    for (let i = 0; i < objSize; i++) {
+    if (this.localStorage.getLocalStorage() === null) {
+    } else {
+      const data = this.localStorage.getLocalStorage();
+      const objSize = Object.keys(data).length;
+      for (let i = 0; i < objSize; i++) {
         this.arr.push(data[i]);
+      }
+      return this.arr;
     }
-    return this.arr;
+  }
+  clearData(): void {
+    const confirmation = confirm('Are you sure?');
+    if (confirmation) {
+      this.arr = [];
+      this.localStorage.clearLocalStorage();
+    }
   }
 }

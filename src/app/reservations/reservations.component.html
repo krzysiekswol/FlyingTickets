@@ -1,17 +1,28 @@
 <div class="l-main">
-  <h3 class="info__user">You do not have any reservation! Get Start <a routerLink="/booking" routerLinkActive="active__link">Here</a></h3>
-  <ng-container>
-    <table>
+  <h3 class="info__user" *ngIf="arr.length === 0">
+    <mat-icon>
+      <span class="material-icons-outlined">
+        info
+      </span>
+    </mat-icon>
+    You do not have any reservation! Get start
+    <a routerLink="/booking" class="info-user__link" routerLinkActive="active__link">
+      Here
+    </a>
+  </h3>
+  <ng-container *ngIf="arr.length > 0">
+    <h3 class="info__user-bold">Let's FLY Together!</h3>
+    <table class="reservation__table">
       <thead>
-        <tr>
+        <tr class="table__row-head">
           <th>Reservation No.</th>
           <th>Name</th>
           <th>Surname</th>
           <th>Destination</th>
         </tr>
       </thead>
-      <tbody *ngFor="let element of arr">
-        <tr>
+      <tbody>
+        <tr *ngFor="let element of arr">
           <td>{{element.reservationNumber}}</td>
           <td>{{element.passengerFirstName}}</td>
           <td>{{element.passengerLastName}}</td>
@@ -19,7 +30,12 @@
         </tr>
       </tbody>
     </table>
+    <div class="button__clear">
+      <button mat-raised-button color="warn" (click)="clearData()">Clear</button>
+    </div>
   </ng-container>
+
+
 </div>
 
 
