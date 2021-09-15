@@ -22,7 +22,8 @@ export class SummaryPageComponent {
     departureAirportCode: this.dataShareService.ticketSummary.departureAirportCode,
     flightStartDate: this.dataShareService.ticketSummary.flightStartDate,
     seatNumber: this.dataShareService.ticketSummary.seatNumber
-};
+  };
+  clicked = false;
   constructor(private dataShareService: DataShareService,
               private localStorage: LocalStorageService,
               private http: DataService) { }

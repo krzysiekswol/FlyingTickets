@@ -67,7 +67,7 @@
     </li>
   </ul>
   <div class="button__wrapper-saved">
-    <button mat-raised-button color="primary" (click)="setDataForLocalStorage() &&  setLocalStorage()">Save your flight</button>
+    <button mat-raised-button color="primary" [disabled]="clicked" (click)="setDataForLocalStorage() &&  setLocalStorage(); clicked = true">Save your flight</button>
   </div>
 </div>
 
