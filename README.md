@@ -1,27 +1,56 @@
-# Untitled1
+# Flying Tickets
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+## This project has been developed for [AFM 2021](https://podyplomowe.ka.edu.pl/oferta/frontend-developer-z-angular-programowanie-nowoczesnych-aplikacji-webowych/) Front-End Developer with Angular - programming modern web-application 
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Technologies
+* Installation
+* Status
+* Live
+* Remarks
+* Credits
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Technologies 
 
-## Running unit tests
+* Angular 12
+* Typescript
+* SASS
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### API
 
-## Running end-to-end tests
+* [Beeceptor](https://beeceptor.com/)
+* [Firebase](https://firebase.google.com/)
+* [OpenWeather](https://openweathermap.org/)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Installation
 
-## Further help
+Install use '*npm install & ng serve*'
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Status
+
+Project is still under construction. In future author will add:
+* autocomplete for search
+* more flights to serach
+* prices
+* departure time
+* better view to choose seats
+
+
+## Live
+
+[FlyingTickets](https://flyingtickets-706bd.firebaseapp.com/start) hosted by Firebase
+
+## Remarks
+
+Application made only for learning purposes
+
+## Credits
+
+* AFM Teachers: Grzegorz, Mateusz and Marcin
+* AFM Student: [Karol](https://github.com/Karol-moleda)
+
+
