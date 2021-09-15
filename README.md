@@ -38,6 +38,7 @@ Project is still under construction. In future author will add:
 * prices
 * departure time
 * better view to choose seats
+* some page need RWD
 
 
 ## Live
